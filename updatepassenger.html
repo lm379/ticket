@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>机票售票后台管理系统</title>
+    <script src="https://fastly.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a href="index.html">返回首页</a>
+    <h2>修改乘客信息</h2>
+    <form id="updatePassengerForm">
+        <h4>请在此处输入需要变更乘客的姓名或者身份证号</h4>
+        <select id="selectField" onchange="updateInputField()">
+            <option value="PName" selected>姓名</option>
+            <option value="PassengerIdentity">证件号</option>
+            <!-- <option value="PTele">电话号码</option> -->
+        </select>
+        <input type="text" id="Pinfo" placeholder="姓名" required>
+        <button type="button" id="queryInfoButton">查询信息</button>
+        <div id="queryResults"></div>
+
+        <h4>请在此处输入变更后的信息</h4>
+        <select id="newselectField" onchange="updateInputField()">
+            <option value="PName" selected>姓名</option>
+            <option value="PassengerIdentity">证件号</option>
+            <option value="PTele">电话号码</option>
+            <option value="PTicketNumber">票号</option>
+        </select>
+        <input type="text" id="newPinfo" placeholder="变更后的信息" required>
+        <button type="button" id="updateInfoButton">修改信息</button>
+    </form>
+    <script src="js/updateInputField.js"></script>
+    <script src="js/queryTicket.js"></script>
+</body>

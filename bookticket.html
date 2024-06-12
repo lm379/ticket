@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>机票售票后台管理系统</title>
+    <script src="https://fastly.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a href="index.html">返回首页</a>
+    <!-- 增 -->
+    <h2>乘客购票</h2>
+    <form id="addPassengerForm">
+        <input type="text" id="PName" placeholder="姓名" required>
+        <select id="gender" required>
+            <option value="">性别</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+        <select id="IdentityStyle" required>
+            <option value="">证件类型</option>
+            <option value="大陆居民身份证" selected>居民身份证</option>
+            <option value="港澳通行证">港澳通行证</option>
+            <option value="护照">护照</option>
+        </select>
+        <input type="text" id="PassengerIdentity" placeholder="证件号" required>
+        <input type="text" id="birthday" placeholder="出生日期" readonly>
+        <input type="text" id="PTele" placeholder="电话" required>
+        <input type="text" id="PTicketNumber" placeholder="机票号" required>
+        <button type="submit">添加乘客</button>
+    </form>
+
+    <script src="js/insert_passenger.js"></script>
+</body>
+
+</html>

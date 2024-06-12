@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>机票售票后台管理系统</title>
+    <script src="https://fastly.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <a href="index.html">返回首页</a>
+    <h2>乘客退票</h2>
+    <form id="updatePaymentStateForm">
+        <select id="selectField" onchange="updateInputField()">
+            <option value="PName" selected>姓名</option>
+            <option value="PassengerIdentity">证件号</option>
+            <option value="PTele">电话号码</option>
+        </select>
+        <input type="text" id="Pinfo" placeholder="姓名" required>
+        <button type="button" id="refundButton">乘客退款</button>
+        <button type="button" id="deleteButton">删除乘客数据</button>
+    </form>
+
+    <script src="js/updateInputField.js"></script>
+    <script src="js/updata_paymentstate.js"></script>
+</body>
+
+</html>

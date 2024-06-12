@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>机票售票后台管理系统</title>
+    <script src="https://fastly.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a href="index.html">返回首页</a>
+    <h2>航班管理</h2>
+    <h3>查询已开设航班</h3>
+    <button id="queryAllFlights">查询</button>
+    <div id="queryResults"></div>
+    <div id="error"></div>
+
+    <h3>修改航班信息</h3>
+    <form id="updateTicket">
+        <h4>请在此处输入需要变更航班的票号</h4>
+        <input type="text" id="TicketNumber" placeholder="票号" required>
+        <select id="SelectTField">
+            <option value="TicketNumber">票号</option>
+            <option value="Price" selected>价格</option>
+            <option value="discount">折扣率</option>
+            <option value="Condition">预售状态</option>
+            <option value="TflightNumber">航班号</option>
+        </select>
+        <input type="text" id="newTinfo" placeholder="变更后的信息" required>
+        <button type="button" id="updateFlight">修改</button>
+    </form>
+
+    <h3>增加航班</h3>
+    <form id="addTicket">
+        <input type="text" id="addTicketNumber" placeholder="票号" required>
+        <input type="text" id="Price" placeholder="价格" required>
+        <input type="text" id="discount" placeholder="折扣率" required>
+        <select id="Condition" required>
+            <option value="">预售状态</option>
+            <option value="1" selected>是</option>
+            <option value="0">否</option>
+        </select>
+        <input type="text" id="TflightNumber" placeholder="航班号" required>
+        <button type="button" id="addFlightButton">添加</button>
+    </form>
+    
+    <h3>删除航班</h3>
+    <form id="deleteTicket">
+        <input type="text" id="deleteTicketNumber" placeholder="票号" required>
+        <button type="button" id="deleteFlight">删除</button>
+    </form>
+
+    <script src="js/queryFlights.js"></script>
+</body>
+
+</html>
