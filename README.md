@@ -34,29 +34,39 @@
 
 数据库修改自 [https://blog.csdn.net/weixin_46629224/article/details/111999429](https://blog.csdn.net/weixin_46629224/article/details/111999429)
 
+在sql文件夹内提供了mysql和sql server两种环境的sql脚本，可自行选用
+
 ![1718255363815](image/README/1718255363815.png)
 
 ## 项目部分截图
+
 ![1718256199727](image/README/1718256199727.png)
 ![1718256222695](image/README/1718256222695.png)
 ![1718256250557](image/README/1718256250557.png)
 
 ## 使用方法
+
 1. 自行安装nodejs，mysql环境，可选安装git
 2. 克隆本项目或下载本项目源码
+
 ```bash
 git clone https://github.com/lm379/ticket.git
 ```
+
 3. 安装依赖
-先进入项目文件夹，再打开终端执行以下命令
+   先进入项目文件夹，再打开终端执行以下命令
+
 ```bash
 npm install body-parser cors express mysql2 --save
 ```
+
 4. 修改数据库配置
-修改app.js第14行左右，将数据库配置改为自己的数据库配置
-![1718256456364](image/README/1718256456364.png)
+   修改app.js第14行左右，将数据库配置改为自己的数据库配置
+   ![1718256456364](image/README/1718256456364.png)
 5. 启动项目
+
 ```bash
 node app.js
 ```
+
 然后双击index.html即可
